@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ayan Sayyad - Aspiring Data Engineer portfolio" />
+  <meta name="theme-color" content="#090909" />
+  <title>Ayan Sayyad | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header">
+    <a class="logo" href="#home">AYAN<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="status"><span></span> Open to internships & learning opportunities</div>
+        <p class="kicker">HELLO, I'M</p>
+        <h1>Ayan Sayyad</h1>
+        <h2><span>Aspiring</span> <strong id="typingText">Data Engineer</strong><i>|</i></h2>
+        <p class="intro">
+          B.Tech Information Technology student focused on <b>Data Engineering, Cloud Computing,
+          Python, SQL and AWS</b>. I enjoy building practical projects and learning technologies
+          that turn raw data into useful systems.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/ayansayyad7000-png" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="mailto:ayansayyad7486@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div><span></span><span></span><span></span></div>
+            <p>ayan@portfolio:~</p>
+          </div>
+          <pre><code><em>$</em> whoami
+Ayan Sayyad
+
+<em>$</em> role
+Aspiring Data Engineer
+
+<em>$</em> stack
+Python  SQL  AWS  Linux
+Git     GitHub  Data Analytics
+
+<em>$</em> motto
+Build. Learn. Improve. Repeat.
+
+<em>$</em> status
+<strong>Ready to build.</strong></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-title reveal">
+        <p>01 / ABOUT</p>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I am a B.Tech Information Technology student with a strong interest in data engineering, cloud computing and big data.</p>
+          <p>I am building my fundamentals in Python, SQL, Git, Linux and AWS while working on hands-on projects. My goal is to grow into a Data Engineer who can build reliable data pipelines and cloud-based data systems.</p>
+        </div>
+        <div class="focus-grid reveal">
+          <article><span>01</span><h3>Data</h3><p>Cleaning, analysis and structured data workflows.</p></article>
+          <article><span>02</span><h3>Cloud</h3><p>AWS fundamentals and cloud infrastructure learning.</p></article>
+          <article><span>03</span><h3>Automation</h3><p>Python-based tools that reduce repetitive work.</p></article>
+          <article><span>04</span><h3>Growth</h3><p>Consistent learning through projects and practice.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-title reveal">
+        <p>02 / SKILLS</p>
+        <h2>Tools I Work With</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill"><span>PY</span><div><h3>Python</h3><p>Programming, automation & data work</p></div></div>
+        <div class="skill"><span>SQL</span><div><h3>SQL</h3><p>Queries, joins & data analysis</p></div></div>
+        <div class="skill"><span>AWS</span><div><h3>AWS</h3><p>Cloud fundamentals & services</p></div></div>
+        <div class="skill"><span>LX</span><div><h3>Linux</h3><p>CLI, files & system basics</p></div></div>
+        <div class="skill"><span>GT</span><div><h3>Git & GitHub</h3><p>Version control & collaboration</p></div></div>
+        <div class="skill"><span>DA</span><div><h3>Data Analytics</h3><p>Cleaning, visualization & insights</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-title reveal">
+        <p>03 / PROJECTS</p>
+        <h2>Things I've Built</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-num">01</div>
+          <p class="tag">PYTHON · DRONE · MAVLINK</p>
+          <h3>Drone Control & Real-Time Monitoring System</h3>
+          <p>Python-based concept for monitoring drone telemetry such as GPS, altitude, battery and flight mode, with room for OpenCV integration.</p>
+          <div class="chips"><span>Python</span><span>MAVLink</span><span>ArduPilot</span><span>OpenCV</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-num">02</div>
+          <p class="tag">ML · XAI · COMPUTER VISION</p>
+          <h3>Used Vehicle Fair Price Estimator</h3>
+          <p>Machine-learning project concept that estimates fair vehicle price from age, mileage and condition, with explainability and image-based damage analysis.</p>
+          <div class="chips"><span>Python</span><span>Machine Learning</span><span>XAI</span><span>CV</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-num">03</div>
+          <p class="tag">CLOUD · DEVOPS · PRACTICE</p>
+          <h3>AWS & GitHub Practical Labs</h3>
+          <p>Step-by-step practical repositories for AWS, Git, GitHub and Linux commands created as part of my hands-on learning journey.</p>
+          <div class="chips"><span>AWS</span><span>Git</span><span>GitHub</span><span>Linux</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-title reveal">
+        <p>04 / EXPERIENCE</p>
+        <h2>Learning & Experience</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div><p class="meta">CURRENT</p><h3>AI / Data Analytics Intern</h3><p>Working on practical analytics tasks, prompts, reporting and AI-assisted workflows while improving data skills.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div><p class="meta">B.TECH INFORMATION TECHNOLOGY</p><h3>Student & Aspiring Data Engineer</h3><p>Focused on Python, SQL, AWS, Linux, Git/GitHub, data engineering fundamentals and project-based learning.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-box reveal">
+        <p class="kicker">LET'S CONNECT</p>
+        <h2>Have an opportunity or project?</h2>
+        <p>I am interested in internships, learning opportunities and practical projects in Data Engineering, Cloud and Analytics.</p>
+        <a class="email-link" href="mailto:ayansayyad7486@gmail.com">ayansayyad7486@gmail.com ↗</a>
+        <div class="actions">
+          <a class="btn primary" href="mailto:ayansayyad7486@gmail.com">Send Email</a>
+          <a class="btn secondary" href="https://github.com/ayansayyad7000-png" target="_blank" rel="noreferrer">GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed & built by <strong>Ayan Sayyad</strong></p>
+    <p>Build. Learn. Improve. Repeat.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
