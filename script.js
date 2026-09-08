@@ -56,8 +56,8 @@ window.addEventListener('mousemove', (event) => {
 const heroVisual = document.getElementById('heroVisual');
 if (heroVisual && window.matchMedia('(min-width: 900px)').matches) {
   window.addEventListener('mousemove', (event) => {
-    const x = (event.clientX / window.innerWidth - 0.5) * 10;
-    const y = (event.clientY / window.innerHeight - 0.5) * -8;
+    const x = (event.clientX / window.innerWidth - 0.5) * 7;
+    const y = (event.clientY / window.innerHeight - 0.5) * -5;
     heroVisual.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   });
 
@@ -83,14 +83,14 @@ function setupParticles() {
   canvas.style.height = `${rect.height}px`;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-  const count = window.innerWidth < 700 ? 34 : 65;
+  const count = window.innerWidth < 700 ? 24 : 45;
   particles = Array.from({ length: count }, () => ({
     x: Math.random() * rect.width,
     y: Math.random() * rect.height,
-    vx: (Math.random() - 0.5) * 0.28,
-    vy: (Math.random() - 0.5) * 0.28,
-    r: Math.random() * 1.7 + 0.5,
-    alpha: Math.random() * 0.45 + 0.18
+    vx: (Math.random() - 0.5) * 0.18,
+    vy: (Math.random() - 0.5) * 0.18,
+    r: Math.random() * 1.4 + 0.5,
+    alpha: Math.random() * 0.3 + 0.12
   }));
 }
 
@@ -100,17 +100,17 @@ function drawParticles() {
   const height = canvas.clientHeight;
   ctx.clearRect(0, 0, width, height);
 
-  particles.forEach((p) => {
+  particles.forEach((p, index) => {
     p.x += p.vx;
     p.y += p.vy;
 
     if (p.x < 0 || p.x > width) p.vx *= -1;
     if (p.y < 0 || p.y > height) p.vy *= -1;
 
+    const warm = index % 2 === 0;
     const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
-    gradient.addColorStop(0, `rgba(196,181,253,${p.alpha})`);
-    gradient.addColorStop(0.5, `rgba(103,232,249,${p.alpha * 0.6})`);
-    gradient.addColorStop(1, 'rgba(103,232,249,0)');
+    gradient.addColorStop(0, warm ? `rgba(184,95,52,${p.alpha})` : `rgba(85,127,114,${p.alpha})`);
+    gradient.addColorStop(1, warm ? 'rgba(184,95,52,0)' : 'rgba(85,127,114,0)');
 
     ctx.beginPath();
     ctx.fillStyle = gradient;
@@ -126,9 +126,9 @@ function drawParticles() {
       const dy = a.y - b.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 105) {
+      if (distance < 110) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(125,211,252,${0.08 * (1 - distance / 105)})`;
+        ctx.strokeStyle = `rgba(87,91,79,${0.055 * (1 - distance / 110)})`;
         ctx.lineWidth = 0.7;
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
@@ -164,7 +164,8 @@ window.addEventListener('scroll', () => {
 
   navLinks.forEach((link) => {
     const active = link.getAttribute('href') === `#${current}`;
-    link.style.color = active ? '#ffffff' : '';
-    link.style.textShadow = active ? '0 0 18px rgba(103,232,249,.45)' : '';
+    link.style.color = active ? '#20211e' : '';
+    link.style.textShadow = 'none';
+    link.style.fontWeight = active ? '700' : '';
   });
 });
