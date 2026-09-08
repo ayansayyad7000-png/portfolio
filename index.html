@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Ayan Sayyad - Aspiring Data Engineer portfolio" />
-  <meta name="theme-color" content="#090909" />
+  <meta name="theme-color" content="#070816" />
   <title>Ayan Sayyad | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+  <div class="grid-overlay"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <header class="header">
@@ -32,10 +35,12 @@
 
   <main>
     <section class="hero section" id="home">
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
       <div class="hero-copy reveal">
         <div class="status"><span></span> Open to internships & learning opportunities</div>
         <p class="kicker">HELLO, I'M</p>
-        <h1>Ayan Sayyad</h1>
+        <h1>Ayan<br><span>Sayyad</span></h1>
         <h2><span>Aspiring</span> <strong id="typingText">Data Engineer</strong><i>|</i></h2>
         <p class="intro">
           B.Tech Information Technology student focused on <b>Data Engineering, Cloud Computing,
@@ -43,8 +48,8 @@
           that turn raw data into useful systems.
         </p>
         <div class="actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
+          <a class="btn primary" href="#projects">Explore Projects <span>↗</span></a>
+          <a class="btn secondary" href="#contact">Let's Connect</a>
         </div>
         <div class="socials">
           <a href="https://github.com/ayansayyad7000-png" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -52,30 +57,42 @@
         </div>
       </div>
 
-      <div class="hero-visual reveal">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="terminal">
-          <div class="terminal-bar">
-            <div><span></span><span></span><span></span></div>
-            <p>ayan@portfolio:~</p>
+      <div class="hero-visual reveal" id="heroVisual">
+        <div class="halo halo-one"></div>
+        <div class="halo halo-two"></div>
+        <div class="halo halo-three"></div>
+
+        <div class="data-core">
+          <div class="core-glow"></div>
+          <div class="core-ring ring-one"></div>
+          <div class="core-ring ring-two"></div>
+          <div class="core-center">
+            <span class="mini-label">CURRENT FOCUS</span>
+            <strong>DATA</strong>
+            <p>ENGINEERING</p>
           </div>
-          <pre><code><em>$</em> whoami
-Ayan Sayyad
-
-<em>$</em> role
-Aspiring Data Engineer
-
-<em>$</em> stack
-Python  SQL  AWS  Linux
-Git     GitHub  Data Analytics
-
-<em>$</em> motto
-Build. Learn. Improve. Repeat.
-
-<em>$</em> status
-<strong>Ready to build.</strong></code></pre>
         </div>
+
+        <div class="floating-card card-python">
+          <span>PY</span>
+          <div><strong>Python</strong><small>Automation</small></div>
+        </div>
+        <div class="floating-card card-aws">
+          <span>AWS</span>
+          <div><strong>Cloud</strong><small>Infrastructure</small></div>
+        </div>
+        <div class="floating-card card-sql">
+          <span>SQL</span>
+          <div><strong>Data</strong><small>Queries</small></div>
+        </div>
+        <div class="floating-card card-linux">
+          <span>LX</span>
+          <div><strong>Linux</strong><small>Systems</small></div>
+        </div>
+
+        <div class="hero-chip chip-one">Build</div>
+        <div class="hero-chip chip-two">Learn</div>
+        <div class="hero-chip chip-three">Improve</div>
       </div>
     </section>
 
